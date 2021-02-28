@@ -1,0 +1,11 @@
+###### Requirements Version Specifiers ######`
+
+kat-framework == 1.0.0
+
+###### Optional dependencies ######
+
+# tensorflow >= 2.4.0
+# tensorflow-gpu >= 2.4.0
+# vizdoom == 1.1.8
+# gym >= 0.18.0
+# gym[atari] >= 0.18.0

@@ -1,0 +1,11 @@
+# Katherine configuration file
+# Lines starting with # are treated as comments (or with whitespaces+#).
+
+global:
+  game_class: kat_framework.games.openai.openai.OpenAI
+openai:
+  render_enabled: true
+agent:
+  memory_max_size: 50000
+network:
+  checkpoint_frequency: 1000

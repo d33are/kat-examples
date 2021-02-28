@@ -1,0 +1,19 @@
+# Katherine configuration file
+# Lines starting with # are treated as comments (or with whitespaces+#).
+
+global:
+  agent_class: kat_framework.agents.deep_q.DQAgent
+  network_class: kat_tensorflow.networks.deep_q.QNetwork
+openai:
+  env_name: LunarLander-v2
+agent:
+  max_observe_episodes: 10
+  action_frequency: 2
+  network_synchronization_frequency: 100
+  constant_exploration_percentage: 0.01
+  decaying_exploration_percentage: 0.1
+network:
+  optimizer_learning_rate: 0.001
+driver:
+  max_episodes: 1000
+  max_steps: 10000

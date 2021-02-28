@@ -1,0 +1,12 @@
+# Katherine configuration file
+# Lines starting with # are treated as comments (or with whitespaces+#).
+
+agent:
+  input_observation_name: ram_vector
+  frame_stacking_enabled: false
+  convert_to_monochrome: false
+  memory_max_size: 100000
+network:
+  fully_connected_parameters:
+    - (256)
+    - (256)

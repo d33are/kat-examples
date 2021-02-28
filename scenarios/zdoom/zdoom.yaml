@@ -1,0 +1,47 @@
+# Katherine configuration file
+# Lines starting with # are treated as comments (or with whitespaces+#).
+
+global:
+  game_class: kat_framework.games.vizdoom.zdoom.ViZDoomGame
+vizdoom:
+  screen_resolution: RES_640X480
+  screen_format: GRAY8
+  depth_buffer_enabled: true
+  labels_buffer_enabled: true
+  automap_buffer_enabled: true
+  render_hud: true
+  render_minimal_hud: false
+  render_crosshair: false
+  render_weapon: true
+  render_decals: false
+  render_particles: false
+  render_effect_sprites: false
+  render_messages: false
+  render_corpses: false
+  render_screen_flashes: true
+  window_visible: true
+  sound_enabled: false
+  episode_start_time: 10
+  mode: PLAYER
+  doom_skill: 5
+  console_enabled: false
+agent:
+  input_observation_name: screen_buffer
+  frame_stacking_enabled: True
+  convert_to_monochrome: False
+  number_of_stacked_frames: 4
+  screen_height: 84
+  screen_weight: 84
+  screen_channels: 1
+  memory_max_size: 50000
+  one_hot_encoded_action_space: True
+network:
+  convolution_parameters:
+    - (32, 8, 4)
+    - (64, 4, 2)
+    - (64, 3, 1)
+  fully_connected_parameters:
+    - (512)
+  #restore_model_from: training/DQNAgent/ViZDoomGame/run_20201229-161023/models/saved_model/QNetwork
+  #restore_checkpoint_from: training/DQNAgent/ViZDoomGame/run_20201229-161023/models/checkpoints/QNetwork
+
