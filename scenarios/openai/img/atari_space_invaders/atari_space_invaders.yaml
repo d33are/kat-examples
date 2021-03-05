@@ -1,0 +1,21 @@
+# Katherine configuration file
+# Lines starting with # are treated as comments (or with whitespaces+#).
+
+global:
+  agent_class: kat_framework.agents.deep_q.DQAgent
+  network_class: kat_tensorflow.networks.deep_q.DuelingQNetwork
+openai:
+  env_name: SpaceInvaders-v0
+  render_enabled: false
+agent:
+  max_observe_episodes: 5000
+  constant_exploration_percentage: 0.05
+  decaying_exploration_percentage: 0.3
+  initial_exploration_rate: 1
+  final_exploration_rate: 0.01
+network:
+  optimizer_learning_rate: 0.00025
+  reward_discount_factor: 0.99
+driver:
+  max_episodes: 100000
+  max_steps: 20000
